@@ -19,19 +19,6 @@ export class UserController {
         return user ;
     }
 
-    @UseGuards(JwtGuard)
-    @Get('me/posts')
-    viewPosts(){
-        return this.userService.viewPosts();
-    }
-
-    @UseGuards(JwtGuard)
-    @Post('me/createpost')
-    createPost(@Body() dto: UserPostDto){
-        return this.userService.createPost(dto);
-       //return response.redirect('localhost:3000/users/me/posts');
-        
-    }
 
     
 }

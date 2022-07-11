@@ -94,7 +94,7 @@ model Comment {
 model Tag {
   tagId Int @id @default(autoincrement())
 
-  tagName String
+  tagName String @unique
   post   Post? @relation(fields: [postId], references: [postId])
   postId Int?
 
